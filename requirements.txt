@@ -1,0 +1,7 @@
+bs4
+requests
+pandas
+lxml
+Django
+gunicorn
+django_heroku
