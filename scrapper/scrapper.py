@@ -16,7 +16,7 @@ def list_attribute(container, tag, attr, filter = {}):
 def list_text(container, tag, filter = {}):
   return [item.find(tag, attrs=filter ).text.strip() for item in container]
 
-def parse_content(container): 
+def parse_content(container):
   organic = container.findAll('div', attrs={'data-tn-component':'organicJob'})
   ids = list_ids(organic)
   text = list_text(organic, 'a')
@@ -42,7 +42,7 @@ def get_response(url):
   md5 = hashlib.md5()
   md5.update(url.encode('utf-8'))
   id = md5.hexdigest()
-  
+
   PATH = os.path.join("cache",id)
   cached = False
   if os.path.exists(PATH):
@@ -58,9 +58,9 @@ def get_response(url):
     print("Requesting", url)
     page = requests.get(url)
     response = page.text
-    file = open(PATH, "w")
+    file = open(PATH, "w", encoding="utf-8")
     file.write(response)
-    file.close() 
+    file.close()
   return response
 
 def scrappe(url):
@@ -76,18 +76,17 @@ def get_name(name):
   return filteredName
 
 def save(name,res):
-  PATH = os.path.join("data") 
+  PATH = os.path.join("data")
   NAME = get_name(name)
   res.to_csv(os.path.join(os.path.join(PATH,NAME + ".csv")), index=None, sep=';', encoding='utf-8')
   res.to_json(os.path.join(os.path.join(PATH,NAME + ".json")), orient='records')
 
 def get_url(search, location):
-    QUERY = urllib.parse.urlencode({ 
-        'as_and' : search, 
+    QUERY = urllib.parse.urlencode({
+        'as_and' : search,
         'l' : location ,
         'radius' : 50,
         'limit' : 50,
         'sort' : 'date'
         })
-    return "https://ca.indeed.com/jobs?" + QUERY + "&jt=all&fromage=any&psf=advsrch" 
-
+    return "https://www.indeed.com.my/jobs?" + QUERY + "&jt=all&fromage=any&psf=advsrch"

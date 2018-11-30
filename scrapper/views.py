@@ -22,7 +22,7 @@ def search(request):
     content = ''
     if 'q' in request.GET:
         search = request.GET['q']
-        LOCATION = "Vancouver, BC"
+        LOCATION = "Malaysia"
         url = scrapper.get_url(search, LOCATION)
         res = scrapper.scrappe(url)
         scrapper.save(search, res)
