@@ -86,7 +86,7 @@ def get_url(search, location):
         'as_and' : search,
         'l' : location ,
         'radius' : 50,
-        'limit' : 50,
+        'limit' : 10,
         'sort' : 'date'
         })
     return "https://www.indeed.com.my/jobs?" + QUERY + "&jt=all&fromage=any&psf=advsrch"
