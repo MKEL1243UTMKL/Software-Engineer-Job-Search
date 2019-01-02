@@ -1,28 +1,39 @@
 body {
-    background-color: #F0F0F0;
+    background-color: #FFE4E1;
 }
 
 .sticky {
-    background-color: #fff;
+    background-color: #8EEDD6;
     position: sticky;
     top:-1px;
     margin:0px;
     padding:4px;
     z-index: 1000;
-    box-shadow: 0px 5px 5px #CCC;
+    box-shadow: 5px 5px 5px #CCC;
+    font-weight: bold;
+    font-family:cursive;
 }
 
 #searchTerm {
     color: #444;
     width: 80%;
     float:left;
-}
+    font-weight: bold;
+    font-style: oblique;
 
-#searchButton {
-    float:right;
-    position:absolute;
+  }
+
+  #searchButton {
+      float:right;
+      position: relative;
+      Top: 40px
+      padding:5px
+      border: 1px solid white;
+
 }
 
 #searchContainer {
     margin: 20px 0px;
+    border: 3px solid black;
 }
+
