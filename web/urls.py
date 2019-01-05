@@ -15,13 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import path, include # new
+from django.views.generic.base import TemplateView # new
 
 import scrapper.views
 
 urlpatterns = [
+	path('admin/', admin.site.urls),
     path('', scrapper.views.home),
     path('data', scrapper.views.data),
     path('search', scrapper.views.search),
+	path('faizal/', include('django.contrib.auth.urls')), # new
+	path('', TemplateView.as_view(template_name='index.html'), name='index'), # new
 ] 
 
 
