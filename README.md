@@ -88,7 +88,9 @@ In this web interface you can query a word and get the results.
 
 ## Screenshot
 
-![](screenshots/python-webscrapper.png)
+![](screenshots/welcomeScreens.PNG)
+
+![](screenshots/View1.PNG)
 
 
 ## Python packages used
