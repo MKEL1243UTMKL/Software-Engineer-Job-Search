@@ -82,6 +82,8 @@ python manage.py runserver
 
 A web server will be started at port 8000 (http://localhost:8000)
 
+Program uploaded via Heroku server. web address: https://myjobsearchutm.herokuapp.com/
+
 In this web interface you can query a word and get the results.
 
 ## Screenshot
