@@ -3,27 +3,47 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JOB SEARCH</title>
+    <title>Carian Kerja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="static/web/main.css">
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<style>
+	.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+	</style>
 </head>
 <body>
-    <div id="root" ></div>
+<div id="loginDiv">
+{% block content %}
+{% if user.is_authenticated %}
+  <p style="font-size:20px; margin:20px">Hi <i style="font-size:24px; color:#f44336">{{ user.first_name }}</i>...!! Welcome to Malaysia Job Search
+  <a href="{% url 'logout' %}" class="waves-effect waves-light btn right">LOGOUT</a></p>
+  <div id="root" ></div>
+{% else %}
+  <p class="center"><i style="font-size:22px">Welcome to Malaysia Job Search</i><br>You are not logged in. Please <a href="{% url 'login' %}" class="waves-effect waves-light btn">LOGIN</a> to view list and make searching..</p>
+{% endif %}
+{% endblock %}
+</div>
+    
+	
     <script type="text/babel" src="static/web/MainView.js"></script>
     <script type="text/babel">
 {% load static %}
-
-
 
 ReactDOM.render(
     <MainView />,
     document.getElementById('root')
 );
       </script>
+	  
+	 
       <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
