@@ -5,3 +5,4 @@ lxml
 Django
 gunicorn
 django_heroku
+sphinx
