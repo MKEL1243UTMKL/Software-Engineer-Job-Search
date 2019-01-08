@@ -63,7 +63,42 @@ class MainView extends React.Component {
 
             </div>
 
+ );
 
+      return (
+
+        <main >
+
+            <div className="container">
+
+            <div className="row sticky">
+
+                    <div className="col s12 m7 left">
+
+                        <h3 >Malaysia Job Search</h3>
+
+                    </div>
+
+                    <div className="col s12 m5">
+
+                        <div className="col s12" id="searchContainer">
+
+                            <form onSubmit={this.handleSubmit}>
+
+                                <input id="searchTerm" type="text" placeholder="Search term" value={this.state.search} onChange={this.handleChange} />
+
+                                <span id="searchButton" className="waves-effect waves-light btn right" onClick={this.handleSubmit} >Go</span>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+            </div>
+          
             <ul className="collection"> {listItems} </ul> { this.state.loading ?
             <img width="100%" src="static/web/loading.gif" /> : null } </div>
             </main> ); } componentDidMount() { this.loadData() } }
