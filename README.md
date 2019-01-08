@@ -86,7 +86,7 @@ In this web interface you can query a word and get the results.
 
 ![](screenshots/welcomeScreens.PNG)
 
-![](screenshots/myjobsearch main.jpg)
+![](screenshots/myjobsearch-main.PNG)
 
 
 ## Python packages used
