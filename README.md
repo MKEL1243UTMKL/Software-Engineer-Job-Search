@@ -13,7 +13,7 @@ By default, the *search term* is "Python".
   * Parse Job posting entities to get structured information
   * Save CSV and JSON data to be loaded into a database or used by a web/mobile application
 * A Django web interface to show dynamic search results  
-  * An Indeed.ca clone to search for job terms
+  * An Indeed.com.my clone to search for job terms
   * Uses the scrapper/scrapper.py utility as a back-end search engine
   * Display results using a web interface created with React.js and Materialize.css
 * Heroku integration to publish the application automatically in a cloud environment
