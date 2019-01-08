@@ -30,18 +30,14 @@ pip install lxml
 pip install Django
 pip install gunicorn
 pip install django_heroku
+pip install sphinx
+pip install rhinotype
 ```
 
 or install using the `pip` shortcut:
 
 ```
 pip install -r requirements.txt
-```
-
-Execute this command to test the web scrapper script: 
-
-```
-python demo.py [searchTerm]
 ```
 
 The results will be stored in `[searchTerm].csv` and `[searchTerm].json` files in the `./data/` folder.
@@ -82,7 +78,7 @@ python manage.py runserver
 
 A web server will be started at port 8000 (http://localhost:8000)
 
-Program uploaded via Heroku server. web address: https://myjobsearchutm.herokuapp.com/
+Program deployed via Heroku server. web address: https://myjobsearchutm.herokuapp.com/
 
 In this web interface you can query a word and get the results.
 
@@ -90,7 +86,7 @@ In this web interface you can query a word and get the results.
 
 ![](screenshots/welcomeScreens.PNG)
 
-![](screenshots/View1.PNG)
+![](screenshots/myjobsearch main.jpg)
 
 
 ## Python packages used
