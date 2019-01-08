@@ -20,8 +20,10 @@
 	</style>
 </head>
 <body>
-<div id="loginDiv">
+<div id="loginDiv" >
+<div class="center"><img src="/static/web/BANNER.png" width="500px" height="100px"/></div>
 {% block content %}
+
 {% if user.is_authenticated %}
   <p style="font-size:20px; margin:20px">Hi <i style="font-size:24px; color:#f44336">{{ user.first_name }}</i>...!! Welcome to Malaysia Job Search
   <a href="{% url 'logout' %}" class="waves-effect waves-light btn right">LOGOUT</a></p>
